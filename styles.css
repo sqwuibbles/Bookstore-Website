@@ -34,10 +34,12 @@
 
 /*BOOK CARDS*/
 
-#book-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.book-list {
+  display: grid;
+  /* Creates a responsive grid: items are at least 250px wide and fill the space */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  gap: 20px; /* Space between cards */
+  padding: 20px;
 }
 
 #featured-authors {
@@ -63,10 +65,10 @@
 }
 
 .book-card {
-    display: flex;
-    flex-direction: row;
-    padding: 45px;
-    border: solid 1px black;
+  display: grid;
+  grid-template-rows: auto 1fr; /* Image takes needed space, text takes the rest */
+  border: solid 1px black;
+  padding: 20px;
 }
 
 :not(#featured-authors) .book-card {
